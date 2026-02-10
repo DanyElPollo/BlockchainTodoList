@@ -1,10 +1,10 @@
 import hardhatToolboxViemPlugin from "@nomicfoundation/hardhat-toolbox-viem";
-import { configVariable, defineConfig } from "hardhat/config";
+import { defineConfig } from "hardhat/config";
 import hardhatVerify from "@nomicfoundation/hardhat-verify";
-import { localhost, metis, metisSepolia } from "viem/chains";
+import { localhost, metisSepolia } from "viem/chains";
 
-const privateKey = "miPrivateKey"
-const privateKeyLocal = "privateKeyLocal" // Solo usar si se maneja localhost con: npx hardhat node
+const privateKey =  process.env.PRIVATE_KEY || ""
+const privateKeyLocal = process.env.PRIVATE_KEY_LOCAL || ""; // Solo usar si se maneja localhost con: npx hardhat node
 
 export default defineConfig({
     plugins: [
