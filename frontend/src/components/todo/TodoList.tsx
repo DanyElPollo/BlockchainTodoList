@@ -39,13 +39,7 @@ function TodoList() {
                         <h2 className="text-2xl font-bold text-white mb-1.5">
                             Mis Tareas
                         </h2>
-                        <p className="text-base text-zinc-500">
-                            {totalCount === 0
-                                ? "Aun no tienes tareas"
-                                : `${completedCount} de ${totalCount} completadas`
-                            }
-                        </p>
-
+                        
                         {totalCount > 0 && (
                             <div className="flex items-center justify-center gap-4 mt-6">
                                 <div className="h-2.5 w-56 rounded-full bg-white/5 overflow-hidden">
